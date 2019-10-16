@@ -11,4 +11,5 @@ instagram?: string;
 tumbler?: string;
 equipo_trabajo?: any[];
 
+
 }
