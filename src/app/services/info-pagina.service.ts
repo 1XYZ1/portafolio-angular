@@ -11,6 +11,7 @@ export class InfoPaginaService {
 
   info: InfoPagina = {};
   cargada = false;
+  cargada2 = false;
   equipo: any [] = [];
 
   constructor( private http: HttpClient ) {
@@ -27,7 +28,7 @@ export class InfoPaginaService {
 
           this.cargada = true;
           this.info = resp;
-          console.log(resp);
+          // console.log(resp);
 
 
         });
@@ -40,6 +41,10 @@ export class InfoPaginaService {
     this.http.get('https://practica-angular-6a0e6.firebaseio.com/equipo.json')
         .subscribe( (resp: Productos[]) => {
           this.equipo = resp;
+
+          this.cargada2 = true;
+
+
      //    console.log(resp);
         });
 
